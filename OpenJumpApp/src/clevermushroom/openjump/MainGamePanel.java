@@ -11,7 +11,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	
 	private static final String TAG = MainGamePanel.class.getSimpleName();
 
-	private MainThread thread;
+	public MainThread thread;
 	
 	public MainGamePanel(Context context) {
 		super(context);

@@ -1,6 +1,7 @@
 package clevermushroom.openjump;
 
 import android.content.Context;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -30,6 +31,11 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	public void surfaceDestroyed(SurfaceHolder holder) {
 		// TODO Auto-generated method stub
 
+	}
+	
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		return super.onTouchEvent(event);
 	}
 
 }

@@ -7,25 +7,33 @@ public class MainThread extends Thread {
 
 	private static final String TAG = MainThread.class.getSimpleName();
 	
-	private boolean running;
-	private SurfaceHolder surfaceHolder;
-	private MainGamePanel gamePanel;
+	private boolean _running;
+	private SurfaceHolder _surfaceHolder;
+	private MainGamePanel _gamePanel;
 	
 	public void setRunning(boolean r) {
-		running = r;
+		_running = r;
+	}
+	
+	public SurfaceHolder getSurfaceHolder() {
+		return _surfaceHolder;
+	}
+	
+	public MainGamePanel getGamePanel() {
+		return _gamePanel;
 	}
 	
 	public MainThread(SurfaceHolder surfaceHolder, MainGamePanel gamePanel) {
 		super();
-		this.surfaceHolder = surfaceHolder;
-		this.gamePanel = gamePanel;
+		this._surfaceHolder = surfaceHolder;
+		this._gamePanel = gamePanel;
 	}
 	
 	@Override
 	public void run() {
 		long tickCount = 0L;
 		Log.d(TAG, "Starting game loop.");
-		while (running) {
+		while (_running) {
 			tickCount++;
 			// DO stuff
 			// update game state
